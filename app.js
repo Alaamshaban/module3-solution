@@ -10,7 +10,7 @@ angular.module('NarrowItDownApp', [])
   function foundItems(){
     var ddo={
       templateUrl:'foundItems.html'
-    };
+  };
     return ddo;
   }
 
@@ -74,7 +74,7 @@ angular.module('NarrowItDownApp', [])
         vm.isitem=false;
         return;
       }
-      
+
       promise.then(function (result) {
         vm.items=MenusearchService.show();
         vm.noitems=false;

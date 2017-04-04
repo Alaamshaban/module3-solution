@@ -14,7 +14,7 @@
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
     <div class="form-group">
-      <input type="text" placeholder="search term" class="form-control" ng-model="menu.searchstring">
+      <input type="text" placeholder="search term" class="form-control" ng-model="menu.searchstring" >
     </div>
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click="menu.getMatchedMenuItems()" >Narrow It Down For Me!</button>
@@ -23,7 +23,7 @@
     <!-- found-items should be implemented as a component -->
     <div class="error-messg" ng-show="menu.empty "  ng-hide=" menu.noitems || menu.isitem">{{menu.emptystring}}</div>
     <div class="error-messg" ng-show="menu.noitems" ng-hide="menu.empty || menu.isitem" >{{menu.nomatches}}</div>
-    <found-items ng-repeat="item in menu.items"
+    <found-items  ng-repeat="item in menu.items"
                              ng-show="menu.isitem"  ng-hide="menu.noitems || menu.empty"   ></found-items>
 
   </div>
